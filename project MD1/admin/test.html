@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+</head>
+<body>
+  <style>
+    form {
+      width: 400px;
+      margin: 0 auto;
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 15px;
+    }
+
+    label {
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    select,
+    input[type="date"],
+    input[type="number"] {
+      padding: 10px;
+      border: none;
+      background-color: #f7f7f7;
+      border-radius: 5px;
+      margin-top: 5px;
+      margin-bottom: 10px;
+    }
+
+    input[type="submit"] {
+      padding: 10px;
+      background-color: #f44336;
+      border: none;
+      color: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #c62828;
+    }
+    /* aaaaaaaaaaaaaaaaaaaaa */
+    .row1 {
+  display: flex;
+  gap: 3px;
+  justify-content: center;
+}
+.row2 {
+  display: flex;
+  gap: 3px;
+  justify-content: center;
+}
+.row3 {
+  display: flex;
+  gap: 3px;
+  justify-content: center;
+}
+.row4 {
+  display: flex;
+  gap: 3px;
+  justify-content: center;
+}
+.row5 {
+  display: flex;
+  gap: 3px;
+  justify-content: center;
+}
+.row6 {
+  display: flex;
+  gap: 3px;
+  justify-content: center;
+}
+.row7 {
+  display: flex;
+  gap: 3px;
+  justify-content: center;
+}
+.row8 {
+  display: flex;
+  gap: 3px;
+  justify-content: center;
+}
+.row9 {
+  display: flex;
+  gap: 3px;
+  justify-content: center;
+}
+
+.row1 span {
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  font-size: small;
+  border: 1px solid rgb(67, 128, 7);
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.row2 span {
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  font-size: small;
+  border: 1px solid rgb(67, 128, 7);
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.row3 span {
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  font-size: small;
+  border: 1px solid rgb(67, 128, 7);
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.row4 span {
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  font-size: small;
+  border: 1px solid rgb(243, 39, 35);
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.row5 span {
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  font-size: small;
+  border: 1px solid rgb(243, 39, 35);
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+.row6 span {
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  font-size: small;
+  border: 1px solid rgb(243, 39, 35);
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+.row7 span {
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  font-size: small;
+  border: 1px solid rgb(243, 39, 35);
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+.row8 span {
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  font-size: small;
+  border: 1px solid rgb(243, 39, 35);
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+.row9 span {
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  font-size: small;
+  background-color: rgb(245, 93, 197);
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 5px;
+  color: white;
+}
+.notice {
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+
+  margin: auto;
+}
+.box div span:hover {
+  background-color: #e84117;
+  color: white;
+}
+
+.mySpan {
+  background-color: #e84117 !important;
+  color: white;}
+  </style>
+  <body>
+    <h1>CGV Booking Form</h1>
+    <form>
+      <div class="form-group">
+        <label for="movie">Phim</label>
+        <select id="movie" name="movie">
+          <!-- <option value="the-conjuring">The Conjuring: Ma Ảo</option>
+          <option value="black-widow">Black Widow</option>
+          <option value="fast-furious-9">Fast & Furious 9</option> -->
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="date">Ngày xem</label>
+        <input type="date" id="date" name="date" />
+      </div>
+
+      <div class="form-group">
+        <label for="time">Giờ xem</label>
+        <select id="time" name="time">
+          <option value="10:00">10:00</option>
+          <option value="12:30">12:30</option>
+          <option value="15:00">15:00</option>
+          <option value="17:30">17:30</option>
+          <option value="20:00">20:00</option>
+          <option value="22:30">22:30</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="theater">Rạp</label>
+        <select id="theater" name="theater">
+          <option value="CGV Xuân Diệu">CGV Xuân Diệu</option>
+          <option value="CGV Sungrand Thuỵ Khê">CGV Sungrand Thuỵ Khê</option>
+          <option value="CGV Vincom Bà Triệu">CGV Vincom Bà Triệu</option>
+          <option value="CGV Vincom Royal City">CGV Vincom Royal City</option>
+          <option value="CGV Vincom Trần Duy Hưng">CGV Vincom Trần Duy Hưng</option>
+          <option value="CGV Crescent Mall">CGV Crescent Mall</option>
+        </select>
+      </div>
+      <!--Modal-->
+      <!-- <div class="modal-dialog modal-xl">
+        <div class="box" id="box">
+          
+        </div>
+      </div> -->
+      <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  CHỌN GHẾ
+</button>
+<div id="chosedseats"></div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">CHỌN CHỖ</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="box" id="box">
+          
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">XÁC NHẬN</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+      <!--END MODAL-->
+      <div id="amount" >
+       <b>Số Lượng Vé</b>
+      </div>
+      <br>
+      <button type="submit" class="btn btn-success">ĐẶT VÉ</button>
+    </form>
+
+    <script>
+      const movies = JSON.parse(localStorage.getItem("listMovies")) ;
+      const movie = document.querySelector("#movie");
+      let form = document.querySelector("form");
+      for(i=0;i<movies.length;i++){
+      movie.innerHTML+=`<option value="${movies[i].title}">${movies[i].title}</option>`
+}
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  let date = document.querySelector("#date").value;
+
+  // Kiểm tra ngày đặt vé có được nhập hay không
+  if (date === "") {
+    alert("Vui lòng chọn ngày đặt vé.");
+    return;
+  }
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  let date = document.querySelector("#date").value;
+  let seats = seatamount.length;
+
+  // Kiểm tra ngày đặt vé có được nhập hay không
+  if (date === "") {
+    alert("Vui lòng chọn ngày đặt vé.");
+    return;
+  }
+
+  // Kiểm tra số lượng ghế đặt có được nhập hay không
+  // if (isNaN(seats) || seats <= 0) {
+  //   alert("Vui lòng nhập số lượng ghế đặt hợp lệ.");
+  //   return;
+  // }
+
+  // Nếu nhập đầy đủ thông tin, tiếp tục xử lý đặt vé
+  let time = document.querySelector("#time").value;
+  let theater = document.querySelector("#theater").value;
+  let movie = document.querySelector("#movie").value;
+
+  let booking = {
+    movie,
+    date,
+    time,
+    theater,
+    seats
+  };
+
+  localStorage.setItem("booking", JSON.stringify(booking));
+  alert("Đã lưu thông tin đặt vé vào LocalStorage.");
+  window.location.href = "/thanhtoan/thanhtoan.html";
+});
+
+  // Kiểm tra số lượng ghế đặt có được nhập hay không
+  // if (isNaN(seats) || seats <= 0) {
+  //   alert("Vui lòng nhập số lượng vé cần đặt. !");
+  //   return;
+  // }
+
+  // Nếu nhập đầy đủ thông tin, tiếp tục xử lý đặt vé
+  let time = document.querySelector("#time").value;
+  let theater = document.querySelector("#theater").value;
+  let movie = document.querySelector("#movie").value;
+  let seats = seatamount.length;
+  let booking = {
+    movie,
+    date,
+    time,
+    theater,
+    seats,
+    
+  };
+
+  localStorage.setItem("booking", JSON.stringify(booking));
+  alert("Đã lưu thông tin đặt vé vào LocalStorage.");
+  window.location.href = "/thanhtoan/thanhtoan.html";
+});
+
+//MODAL
+let box = document.getElementById("box");
+let ghe = document.getElementById("chosedseats");
+let price = document.getElementById("price");
+let total = document.getElementById("total");
+let amount = document.getElementById("amount");
+const boxData = JSON.parse(localStorage.getItem("boxData"));
+
+// localStorage.setItem("boxData",JSON.stringify(boxData))
+
+
+
+const boxElement = document.getElementById("box");
+
+for (let i = 0; i < boxData.length; i++) {
+  const rowElement = document.createElement("div");
+  rowElement.className = "row" + (i + 1);
+  for (let j = 0; j < boxData[i].length; j++) {
+    const spanElement = document.createElement("span");
+    spanElement.innerHTML = boxData[i][j];
+    rowElement.appendChild(spanElement);
+  }
+  boxElement.appendChild(rowElement);
+}
+
+
+
+box.addEventListener("click", function (e) {
+  seatamount=[]
+  let mySpan = document.getElementsByClassName("mySpan")
+  ghe.innerText="  "
+  if (e.target.tagName === "SPAN") {
+    // Chỉ xử lý khi click vào phần tử là thẻ span
+    const targetSpan = e.target;
+    if (targetSpan.classList.contains("mySpan")) {
+      targetSpan.classList.remove("mySpan");
+    
+      for(let i = 0; i < mySpan.length; i++) {
+        ghe.innerText +=" "+ mySpan[i].innerText
+        seatamount.push(ghe.innerText)
+      }
+        amount.innerHTML =`<b>Số lượng vé</b> ${seatamount.length}`
+    } else {
+      targetSpan.classList.add("mySpan");
+      for(let i = 0; i < mySpan.length; i++) {
+        ghe.innerText +=" "+ mySpan[i].innerText
+        seatamount.push(ghe.innerText)
+   console.log(seatamount);
+   amount.innerHTML =`<b>Số lượng vé</b> ${seatamount.length}`
+      // selectedSeatsCount++;
+    }
+    }
+  }
+  localStorage.setItem("booking",JSON.stringify([]))
+});
+    </script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

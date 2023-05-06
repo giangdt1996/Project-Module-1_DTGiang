@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          background-color: #f5f5f5;
+        }
+  
+        .invoice {
+          width: 500px;
+          background-color: #fff;
+          border-radius: 5px;
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+          padding: 30px;
+          text-align: center;
+        }
+  
+        h1 {
+          margin-top: 0;
+          font-size: 32px;
+          font-weight: 600;
+          color: #333;
+        }
+  
+        h2 {
+          margin-bottom: 30px;
+          font-size: 24px;
+          font-weight: 400;
+          color: #333;
+        }
+  
+        .movie-info,
+        .ticket-info {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 15px;
+        }
+  
+        .label {
+          margin-right: 10px;
+          font-size: 16px;
+          font-weight: 600;
+          color: #333;
+        }
+  
+        .value {
+          font-size: 16px;
+          font-weight: 400;
+          color: #666;
+        }
+  
+        .total {
+          margin-top: 30px;
+          font-size: 24px;
+          font-weight: 600;
+          color: #333;
+        }
+        .box div span:hover {
+  background-color: #e84117;
+  color: white;
+}
+
+.mySpan {
+  background-color: #e84117 !important;
+  color: white;}
+       
+      </style>
+    </head>
+    <body>
+
+      
+      <div class="container" id="invoice-container" style="display:none;">
+        <div class="invoice">
+          <h1>HÓA ĐƠN VÉ XEM PHIM</h1>
+          <h2 id="theater-name"></h2>
+  
+          <div class="movie-info">
+            <p class="label">Phim:</p>
+            <p class="value" id="movie-name"></p>
+          </div>
+  
+          <div class="movie-info">
+            <p class="label">Ngày xem:</p>
+            <p class="value" id="booking-date"></p>
+          </div>
+  
+          <div class="movie-info">
+            <p class="label">Giờ xem:</p>
+            <p class="value" id="booking-time"></p>
+          </div>
+  
+          <div class="ticket-info">
+            <p class="label">Số lượng vé:</p>
+            <p class="value" id="booking-seats"></p>
+          </div>
+  
+          <div class="ticket-info">
+            <p class="label">Giá vé:</p>
+            <p class="value" id="ticket-price"></p>
+          </div>
+  
+          <div class="total" id="total-price"></div>
+        </div>
+      </div>
+      <script>
+        // const theaterName = document.querySelector("#theater-name");
+        // const movieName = document.querySelector("#movie-name");
+        // const bookingDate = document.querySelector("#booking-date");
+        // const bookingTime = document.querySelector("#booking-time");
+        // const bookingSeats = document.querySelector("#booking-seats");
+        // const ticketPrice = document.querySelector("#ticket-price");
+        // const totalPrice = document.querySelector("#total-price");
+  
+        // const booking = JSON.parse(localStorage.getItem("booking"));
+  
+        // theaterName.textContent = booking.theater;
+        // movieName.textContent = booking.movie;
+        // bookingDate.textContent = booking.date;
+        // bookingTime.textContent = booking.time;
+        // bookingSeats.textContent = booking.seats;
+        // ticketPrice.textContent = "80,000 VND"; // Giá vé bạn có thể lấy từ cơ sở dữ liệu hoặc tính toán bằng code
+        // totalPrice.textContent = `${booking.seats * 80000} VND`;
+
+        const booking = JSON.parse(localStorage.getItem("booking"));
+
+if (booking) {
+  const theaterName = document.querySelector("#theater-name");
+  const movieName = document.querySelector("#movie-name");
+  const bookingDate = document.querySelector("#booking-date");
+  const bookingTime = document.querySelector("#booking-time");
+  const bookingSeats = document.querySelector("#booking-seats");
+  const ticketPrice = document.querySelector("#ticket-price");
+  const totalPrice = document.querySelector("#total-price");
+
+  theaterName.textContent = booking.theater;
+  movieName.textContent = booking.movie;
+  bookingDate.textContent = booking.date;
+  bookingTime.textContent = booking.time;
+  bookingSeats.textContent = booking.seats;
+
+//   ticketPrice.textContent = "80,000 VND"; // Giá vé bạn có thể lấy từ cơ sở dữ liệu hoặc tính toán bằng code
+//   totalPrice.textContent = `TỔNG TIỀN THANH TOÁN: ${booking.seats * 100000} VND`;
+
+
+  
+//   document.querySelector("#invoice-container").style.display = "block";
+const ticketPriceValue = 80000;
+  const ticketPriceFormatted = ticketPriceValue.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
+  ticketPrice.textContent = ticketPriceFormatted;
+
+  const totalValue = booking.seats * ticketPriceValue;
+  const totalValueFormatted = totalValue.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
+  totalPrice.textContent = `TỔNG TIỀN THANH TOÁN: ${totalValueFormatted}`;
+
+  document.querySelector("#invoice-container").style.display = "block";
+} 
+      </script>
+</body>
+</html>
